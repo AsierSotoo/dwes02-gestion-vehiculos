@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Vehículos almacenados</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css?v=3">
+</head>
+<body>
+  <div class="container">
+    <h1>Vehículos almacenados</h1>
+
+    <?php if (empty($vehiculos)): ?>
+      <div class="alert">No hay vehículos.</div>
+    <?php else: ?>
+      <div class="card table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>ID</th><th>Tipo</th><th>Marca</th><th>Modelo</th><th>Año</th><th>Extra</th>
+            </tr>
+          </thead>
+          <tbody>
+          <?php foreach ($vehiculos as $v): ?>
+            <tr>
+              <td><?= $v->id ?></td>
+              <td><?= $v->tipo ?></td>
+              <td><?= htmlspecialchars($v->marca) ?></td>
+              <td><?= htmlspecialchars($v->modelo) ?></td>
+              <td><?= $v->anio ?></td>
+              <td><?= $v->getInfoExtra() ?></td>
+            </tr>
+          <?php endforeach; ?>
+          </tbody>
+        </table>
+      </div>
+    <?php endif; ?>
+
+    <p><a href="./">← Volver</a></p>
+  </div>
+</body>
+</html>

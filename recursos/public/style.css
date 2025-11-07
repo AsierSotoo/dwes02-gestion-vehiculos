@@ -1,0 +1,139 @@
+/* === RESET BÁSICO === */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", Roboto, Arial, sans-serif;
+}
+
+/* === ESTRUCTURA GENERAL === */
+body {
+  background-color: #f3f6f9;
+  color: #222;
+  padding: 30px;
+}
+
+/* === CONTENEDOR === */
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+  padding: 25px 35px;
+}
+
+/* === CABECERAS === */
+h1 {
+  color: #005f73;
+  font-size: 26px;
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+h2 {
+  font-size: 18px;
+  color: #0a9396;
+  margin: 25px 0 10px;
+  border-left: 5px solid #0a9396;
+  padding-left: 10px;
+}
+
+/* === FORMULARIOS === */
+form {
+  background-color: #f9fbfd;
+  border: 1px solid #dbe1e7;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 25px;
+}
+
+label {
+  font-weight: 600;
+  display: inline-block;
+  margin-bottom: 5px;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccd5e0;
+  border-radius: 8px;
+  margin-bottom: 12px;
+  transition: all 0.2s;
+}
+
+input:focus, textarea:focus {
+  border-color: #0a9396;
+  box-shadow: 0 0 0 3px rgba(10,147,150,0.2);
+  outline: none;
+}
+
+/* === BOTONES === */
+button {
+  background-color: #0a9396;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.1s;
+  width: 100%;
+}
+
+button:hover {
+  background-color: #0d6e75;
+  transform: translateY(-1px);
+}
+
+button:active {
+  transform: translateY(1px);
+}
+
+/* === TABLAS === */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+th, td {
+  border: 1px solid #e0e6ed;
+  padding: 10px;
+  text-align: left;
+}
+
+th {
+  background-color: #e6f3f4;
+  color: #0a9396;
+  font-weight: bold;
+}
+
+/* === ALERTAS Y MENSAJES === */
+.alert {
+  margin: 15px 0;
+  padding: 12px;
+  border-radius: 8px;
+  font-weight: 500;
+}
+
+.alert.success {
+  background-color: #d1fae5;
+  color: #065f46;
+  border: 1px solid #10b981;
+}
+
+.alert.error {
+  background-color: #fee2e2;
+  color: #991b1b;
+  border: 1px solid #f87171;
+}
+
+/* === PIE DE PÁGINA (opcional) === */
+footer {
+  text-align: center;
+  font-size: 13px;
+  color: #555;
+  margin-top: 25px;
+}

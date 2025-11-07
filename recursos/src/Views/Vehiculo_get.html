@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Vehículo · getById()</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css?v=3">
+</head>
+<body>
+  <div class="container">
+    <h1>Resultado getById()</h1>
+
+    <?php if (!$vehiculo): ?>
+      <div class="alert error">No existe vehículo con ese ID.</div>
+    <?php else: ?>
+      <div class="card">
+        <table>
+          <tbody>
+            <tr><th>ID</th><td><?= $vehiculo->id ?></td></tr>
+            <tr><th>Tipo</th><td><?= $vehiculo->tipo ?></td></tr>
+            <tr><th>Marca</th><td><?= htmlspecialchars($vehiculo->marca) ?></td></tr>
+            <tr><th>Modelo</th><td><?= htmlspecialchars($vehiculo->modelo) ?></td></tr>
+            <tr><th>Año</th><td><?= $vehiculo->anio ?></td></tr>
+            <tr><th>Extra</th><td><?= $vehiculo->getInfoExtra() ?></td></tr>
+          </tbody>
+        </table>
+      </div>
+    <?php endif; ?>
+
+    <p><a href="./">← Volver</a></p>
+  </div>
+</body>
+</html>

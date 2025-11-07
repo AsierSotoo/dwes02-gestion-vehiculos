@@ -1,0 +1,11 @@
+{
+  "name": "asier/dwes02-vehiculos",
+  "description": "DWES02 - MVC sencillo",
+  "type": "project",
+  "autoload": {
+    "psr-4": {
+      "App\\": "src/"
+    }
+  },
+  "require": {}
+}
